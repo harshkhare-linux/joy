@@ -25,7 +25,7 @@ phases:
     - docker images 
     - aws ecr get-login-password | docker login --username AWS --password-stdin 830693137840.dkr.ecr.ap-south-1.amazonaws.com
     # update the following line with the URI of your own ECR repository
-    - docker push $REPOSITORY_URI:latest
+#    - docker push $REPOSITORY_URI:latest
     - docker push $REPOSITORY_URI:$IMAGE_TAG
     - echo Writing image definitions file... 
     #- printf '[{"ImageURI":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imageDetail.json
